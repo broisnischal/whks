@@ -1,11 +1,12 @@
 {
   "name": "whks",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Webhook kit for building webhook integrations",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "private": false,
   "exports": {
     ".": {
       "import": {
@@ -35,6 +36,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broisnischal/whks.git",
+    "directory": "packages/whks"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "typescript": "catalog:",
     "unbuild": "catalog:"
