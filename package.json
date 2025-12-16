@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "build": "pnpm -r run build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build:bundle-stats": "node scripts/generate-bundle-stats.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,11 @@
     "eslint": "catalog:",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "rollup": "catalog:",
+    "@rollup/plugin-typescript": "catalog:",
+    "@rollup/plugin-node-resolve": "catalog:",
+    "@rollup/plugin-commonjs": "catalog:"
   },
   "packageManager": "pnpm@10.13.1"
 }
