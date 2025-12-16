@@ -1,15 +1,64 @@
 # whks
 
-To install dependencies:
+Webhook kit for building webhook integrations with various providers and adapters.
+
+## Installation
 
 ```bash
-bun install
+pnpm add whks
+# or
+npm install whks
+# or
+yarn add whks
 ```
 
-To run:
+## Features
+
+- 🎯 **Provider Support**: Easy integration with webhook providers (Discord, etc.)
+- 🔌 **Adapter Support**: Framework adapters (Hono, etc.)
+- 📦 **TypeScript**: Full TypeScript support with type definitions
+- 🚀 **Modern**: Built with modern tooling and ESM support
+
+## Usage
+
+### Basic Example
+
+```typescript
+import { createWebhook } from 'whks'
+
+// Your webhook implementation
+```
+
+### With Hono Adapter
+
+```typescript
+import { createHonoAdapter } from 'whks/adapters/hono'
+
+// Use with Hono framework
+```
+
+### Discord Provider
+
+```typescript
+import { createDiscordProvider } from 'whks/providers/discord'
+
+// Discord webhook integration
+```
+
+## Development
+
+### Build
 
 ```bash
-bun run index.ts
+pnpm build
 ```
 
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Development Mode
+
+```bash
+pnpm dev
+```
+
+## License
+
+MIT
