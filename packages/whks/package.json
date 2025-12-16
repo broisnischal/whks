@@ -1,0 +1,9 @@
+{
+  "name": "whks",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "catalog:",
+    "unbuild": "catalog:"
+  }
+}
