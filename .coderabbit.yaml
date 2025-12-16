@@ -1,0 +1,93 @@
+reviews:
+  auto_review: true
+
+  target_branches:
+    - main
+
+  # Review only when PR is ready for review (not in draft)
+  review_status: ready
+
+  # Enable inline comments
+  inline: true
+
+  # Enable summary comments
+  summary: true
+
+  # Collapse walkthrough in summary
+  collapse_walkthrough: false
+
+  # Show changed files summary
+  changed_files_summary: true
+
+  # Generate sequence diagrams
+  sequence_diagrams: true
+
+  # Assess linked issues
+  assess_linked_issues: true
+
+  # Show related issues
+  related_issues: true
+
+  # Show related pull requests
+  related_prs: true
+
+  # Suggest labels
+  suggested_labels: true
+
+  # Suggest reviewers
+  suggested_reviewers: true
+
+# Path filters - exclude build artifacts and dependencies
+path_filters:
+  - "!**/node_modules/**"
+  - "!**/dist/**"
+  - "!**/dist-bundle/**"
+  - "!**/.cache/**"
+  - "!**/coverage/**"
+  - "!**/*.log"
+  - "!**/pnpm-lock.yaml"
+  - "!**/package-lock.json"
+  - "!**/yarn.lock"
+  - "**/packages/**/*.{ts,tsx,js,jsx}"
+  - "**/*.{ts,tsx,js,jsx,json,yaml,yml,md}"
+
+# Path-specific instructions for TypeScript/JavaScript code
+path_instructions:
+  - path: "packages/**/*.{ts,tsx}"
+    instructions: |
+      - Review TypeScript code for type safety and best practices
+      - Check for proper error handling
+      - Ensure code follows the project's coding standards
+      - Verify exports and imports are correct
+      - Check for potential security vulnerabilities
+      - Ensure proper async/await usage
+      - Verify no console.log statements in production code
+
+  - path: "**/*.test.{ts,tsx,js}"
+    instructions: |
+      - Review test coverage and quality
+      - Ensure tests are meaningful and not just checking for existence
+      - Verify edge cases are covered
+      - Check for proper mocking and test isolation
+
+# Code generation settings
+code_generation:
+  # Enable unit test generation
+  unit_tests:
+    enabled: true
+
+# Chat settings
+chat:
+  # Auto-reply in chat (requires @coderabbitai mention)
+  auto_reply: false
+
+# Finishing touches
+finishing_touches:
+  # Generate unit tests
+  unit_tests:
+    enabled: true
+
+# Request changes workflow (approve PRs after review)
+request_changes_workflow:
+  enabled: false # Keep human review required
+
